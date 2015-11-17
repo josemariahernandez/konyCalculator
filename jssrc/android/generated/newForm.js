@@ -4,23 +4,23 @@ function newForm_operando1_onDone_seq0(eventobject, changedtext) {
 };
 
 function newForm_operando2_onDone_seq0(eventobject, changedtext) {
-    var operando2 = "";
+    var operando2 = 0;
 };
 
 function newForm_sumar_onClick_seq0(eventobject) {
-    sumar.call(this);
+    printResult.call(this, sumar(setVariable()));
 };
 
 function newForm_restar_onClick_seq0(eventobject) {
-    newForm2.show();
+    printResult.call(this, restar(setVariable()));
 };
 
 function newForm_multiplicar_onClick_seq0(eventobject) {
-    multiplicar.call(this);
+    printResult.call(this, multiplicar(setVariable()));
 };
 
 function newForm_dividir_onClick_seq0(eventobject) {
-    dividir.call(this);
+    printResult.call(this, dividir(setVariable()));
 };
 
 function addWidgetsnewForm() {
@@ -47,7 +47,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": null,
         "secureTextEntry": false,
-        "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
+        "textInputMode": constants.TEXTBOX_INPUT_MODE_NUMERIC,
         "placeholder": null,
         "autoCapitalize": constants.TEXTBOX_AUTO_CAPITALIZE_NONE,
         "onDone": newForm_operando1_onDone_seq0,
@@ -108,7 +108,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": null,
         "secureTextEntry": false,
-        "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
+        "textInputMode": constants.TEXTBOX_INPUT_MODE_NUMERIC,
         "placeholder": null,
         "autoCapitalize": constants.TEXTBOX_AUTO_CAPITALIZE_NONE,
         "onDone": newForm_operando2_onDone_seq0,

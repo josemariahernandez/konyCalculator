@@ -4,11 +4,12 @@ var appConfig = {
     appName: "newProject",
     appVersion: "1.0.0",
     platformVersion: null,
-    serverIp: "192.168.30.27",
+    serverIp: "192.168.56.1",
     serverPort: "8080",
     secureServerPort: "443",
-    url: "http://192.168.30.27:8080/middleware/MWServlet",
-    secureurl: "http://192.168.30.27:8080/middleware/MWServlet",
+    isMFApp: false,
+    url: "http://192.168.56.1:8080/middleware/MWServlet",
+    secureurl: "http://192.168.56.1:8080/middleware/MWServlet",
     middlewareContext: "middleware"
 };
 sessionID = "";

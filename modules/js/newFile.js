@@ -1,31 +1,40 @@
-function sumar() {
-	var operando1 = newForm.operando1.text;
-	var operando2 = newForm.operando2.text;
-	var resultado = kony.math.toInteger(operando1) + kony.math.toInteger(operando2);
-	newForm.resultado.text = resultado;
-	return;
+function setVariable(){
+	var arrayOperandos = [kony.math.toInteger(newForm.operando1.text),kony.math.toInteger(newForm.operando2.text)]
+	return arrayOperandos;
 }
 
-function restar(){
-	var operando1 = newForm.operando1.text;
-	var operando2 = newForm.operando2.text;
-	var resultado = kony.math.toInteger(operando1) - kony.math.toInteger(operando2);
-	newForm.resultado.text = resultado;
-	return;
+function printResult(resul){
+	newForm.resultado.text = resul;
 }
 
-function multiplicar(){
-	var operando1 = newForm.operando1.text;
-	var operando2 = newForm.operando2.text;
-	var resultado = kony.math.toInteger(operando1) * kony.math.toInteger(operando2);
-	newForm.resultado.text = resultado;
-	return;
+function sumar(operando) {
+	var resultado = operando[0] + operando[1];	
+	return resultado;
 }
 
-function dividir(){
-	var operando1 = newForm.operando1.text;
-	var operando2 = newForm.operando2.text;
-	var resultado = kony.math.toInteger(operando1) / kony.math.toInteger(operando2);
-	newForm.resultado.text = resultado;
-	return;
+function restar(operando){
+	var resultado = operando[0] - operando[1];
+	return resultado;
+}
+
+function multiplicar(operando){
+	var resultado = operando[0] * operando[1];
+	return resultado;
+}
+
+function dividir(operando){
+	if (operando[1]!==0){
+		var resultado = operando[0] / operando[1];
+		return resultado;
+	}else{
+		showAlertDivisionZero();
+	};
+}
+
+function showAlertDivisionZero(){
+	kony.ui.Alert({message: "La division por 0 no está soportada",
+	               alertType: constants.ALERT_TYPE_INFO,
+	               yesLabel:"Close"}, 
+	               {});//usage: kony.ui.Alert(basicProperties,layoutProperties,platformSpecificProperties);
+		return -1;	
 }

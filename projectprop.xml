@@ -13,7 +13,7 @@
     <attributes name="wp8fliplargekey" value=""/>
     <attributes name="READ_SMS" value="false"/>
     <attributes name="DEVICE_POWER" value="false"/>
-    <attributes name="cloud_selected_ipaddress_list" value="http://127.0.0.1:8080,http://192.168.30.27:8080,http://192.168.56.1:8080,http://192.168.55.1:8080,http://172.16.250.1:8080,http://192.168.33.56:8080"/>
+    <attributes name="cloud_selected_ipaddress_list" value="http://127.0.0.1:8080,http://192.168.56.1:8080"/>
     <attributes name="tcphoneformatindicator" value="false"/>
     <attributes name="antialiaseddrawing" value="false"/>
     <attributes name="Pictures_Library_Access" value="true"/>
@@ -45,7 +45,7 @@
     <attributes name="Text_Messaging" value="true"/>
     <attributes name="apmgestureswipe" value="false"/>
     <attributes name="appnamekey" value="newProject"/>
-    <attributes name="currentgaversion" value="6.5.1.GA_v201507231955"/>
+    <attributes name="currentgaversion" value="6.5.2.GA_v201509231311_r1"/>
     <attributes name="SET_TIME" value="false"/>
     <attributes name="sessionmanager" value="Kony Session Manager"/>
     <attributes name="SYSTEM_ALERT_WINDOW" value="false"/>
@@ -353,7 +353,7 @@
     <attributes name="tcbjs320basefontsize" value="10"/>
     <attributes name="APPLICATION_THEME" value="default"/>
     <attributes name="wp8packagepublisheridkey" value=""/>
-    <attributes name="cloud_url" value="http://192.168.30.27:8080"/>
+    <attributes name="cloud_url" value="http://192.168.56.1:8080"/>
     <attributes name="disablehttpskey" value="false"/>
     <attributes name="Music_Library" value="true"/>
     <attributes name="Location" value="true"/>
