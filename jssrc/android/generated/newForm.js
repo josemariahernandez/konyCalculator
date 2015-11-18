@@ -1,4 +1,8 @@
 //Form JS File
+function newForm_newForm_init_seq0(eventobject, neworientation) {
+    inicializarNewForm.call(this);
+};
+
 function newForm_operando1_onDone_seq0(eventobject, changedtext) {
     var operando1 = 0;
 };
@@ -7,20 +11,8 @@ function newForm_operando2_onDone_seq0(eventobject, changedtext) {
     var operando2 = 0;
 };
 
-function newForm_sumar_onClick_seq0(eventobject) {
-    printResult.call(this, sumar(setVariable()));
-};
-
-function newForm_restar_onClick_seq0(eventobject) {
-    printResult.call(this, restar(setVariable()));
-};
-
-function newForm_multiplicar_onClick_seq0(eventobject) {
-    printResult.call(this, multiplicar(setVariable()));
-};
-
-function newForm_dividir_onClick_seq0(eventobject) {
-    printResult.call(this, dividir(setVariable()));
+function newForm_funcExten_onClick_seq0(eventobject) {
+    newForm2.show();
 };
 
 function addWidgetsnewForm() {
@@ -38,7 +30,7 @@ function addWidgetsnewForm() {
         "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "marginInPixel": false,
         "paddingInPixel": false,
-        "containerWeight": 6
+        "containerWeight": 5
     }, {
         "textCopyable": false
     });
@@ -154,7 +146,7 @@ function addWidgetsnewForm() {
         "position": constants.BOX_POSITION_AS_NORMAL,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 17,
+        "containerWeight": 15,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -224,7 +216,7 @@ function addWidgetsnewForm() {
         "position": constants.BOX_POSITION_AS_NORMAL,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 11,
+        "containerWeight": 10,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -241,8 +233,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": "Sumar",
         "skin": "btnNormal",
-        "focusSkin": "btnFocus",
-        "onClick": newForm_sumar_onClick_seq0
+        "focusSkin": "btnFocus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -260,8 +251,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": "Restar",
         "skin": "btnNormal",
-        "focusSkin": "btnFocus",
-        "onClick": newForm_restar_onClick_seq0
+        "focusSkin": "btnFocus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -280,7 +270,7 @@ function addWidgetsnewForm() {
         "position": constants.BOX_POSITION_AS_NORMAL,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 21,
+        "containerWeight": 20,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -297,8 +287,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": "Multiplicar",
         "skin": "btnNormal",
-        "focusSkin": "btnFocus",
-        "onClick": newForm_multiplicar_onClick_seq0
+        "focusSkin": "btnFocus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -316,8 +305,7 @@ function addWidgetsnewForm() {
         "isVisible": true,
         "text": "Dividir",
         "skin": "btnNormal",
-        "focusSkin": "btnFocus",
-        "onClick": newForm_dividir_onClick_seq0
+        "focusSkin": "btnFocus"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -336,7 +324,7 @@ function addWidgetsnewForm() {
         "position": constants.BOX_POSITION_AS_NORMAL,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 21,
+        "containerWeight": 19,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
         "margin": [0, 0, 0, 0],
@@ -348,8 +336,45 @@ function addWidgetsnewForm() {
     }, {});
     hbox31337101543.add(
     multiplicar, dividir);
+    var funcExten = new kony.ui.Button({
+        "id": "funcExten",
+        "isVisible": true,
+        "text": "Funciones Avanzadas",
+        "skin": "btnNormal",
+        "focusSkin": "btnFocus",
+        "onClick": newForm_funcExten_onClick_seq0
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 3, 0, 3],
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "displayText": true,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "containerWeight": 69
+    }, {});
+    var hbox1866787987353774 = new kony.ui.Box({
+        "id": "hbox1866787987353774",
+        "isVisible": true,
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 11,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "vExpand": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hbox1866787987353774.add(
+    funcExten);
     newForm.add(
-    label31337101524, hbox31337101535, hbox31337101542, hbox31337101538, hbox31337101521, hbox31337101543);
+    label31337101524, hbox31337101535, hbox31337101542, hbox31337101538, hbox31337101521, hbox31337101543, hbox1866787987353774);
 };
 
 function newFormGlobals() {
@@ -360,6 +385,7 @@ function newFormGlobals() {
         "title": null,
         "enabledForIdleTimeout": false,
         "skin": "frm",
+        "init": newForm_newForm_init_seq0,
         "addWidgets": addWidgetsnewForm
     }, {
         "padding": [0, 0, 0, 0],

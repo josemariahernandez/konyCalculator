@@ -1,3 +1,7 @@
+function inicializarNewForm() {
+    FileController.init();
+}
+
 function setVariable() {
     var arrayOperandos = [kony.math.toInteger(newForm.operando1.text), kony.math.toInteger(newForm.operando2.text)]
     return arrayOperandos;
@@ -37,5 +41,15 @@ function showAlertDivisionZero() {
         alertType: constants.ALERT_TYPE_INFO,
         yesLabel: "Close"
     }, {}); //usage: kony.ui.Alert(basicProperties,layoutProperties,platformSpecificProperties);
-    return;
+    return -1;
+}
+var FileController = {
+    init: function() {
+        FileController.clickSumar();
+    },
+    clickSumar: function() {
+        newForm.sumar.onClick = function() {
+            alert("AQUI SUMAMOS");
+        }
+    }
 }

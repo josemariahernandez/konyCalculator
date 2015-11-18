@@ -4,7 +4,10 @@
         <component displayname="TextBox2" id="operando1" type="textbox2"/>
         <component displayname="TextBox2" id="operando2" type="textbox2"/>
     </container>
-    <container isflex="false" displayname="Form" id="newForm2" type="form"/>
+    <container isflex="false" displayname="Form" id="newForm2" type="form">
+        <component displayname="TextBox2" id="operando3" type="textbox2"/>
+        <component displayname="TextBox2" id="operando4" type="textbox2"/>
+    </container>
     <globalsequences/>
     <skins/>
 </application>
